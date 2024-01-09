@@ -1,0 +1,325 @@
+\documentclass[]{tufte-handout}
+
+% ams
+\usepackage{amssymb,amsmath}
+
+\usepackage{ifxetex,ifluatex}
+\usepackage{fixltx2e} % provides \textsubscript
+\ifnum 0\ifxetex 1\fi\ifluatex 1\fi=0 % if pdftex
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+\else % if luatex or xelatex
+  \makeatletter
+  \@ifpackageloaded{fontspec}{}{\usepackage{fontspec}}
+  \makeatother
+  \defaultfontfeatures{Ligatures=TeX,Scale=MatchLowercase}
+  \makeatletter
+  \@ifpackageloaded{soul}{
+     \renewcommand\allcapsspacing[1]{{\addfontfeature{LetterSpace=15}#1}}
+     \renewcommand\smallcapsspacing[1]{{\addfontfeature{LetterSpace=10}#1}}
+   }{}
+  \makeatother
+
+\fi
+
+% graphix
+\usepackage{graphicx}
+\setkeys{Gin}{width=\linewidth,totalheight=\textheight,keepaspectratio}
+
+% booktabs
+\usepackage{booktabs}
+
+% url
+\usepackage{url}
+
+% hyperref
+\usepackage{hyperref}
+
+% units.
+\usepackage{units}
+
+
+\setcounter{secnumdepth}{2}
+
+% citations
+
+
+% pandoc syntax highlighting
+
+% table with pandoc
+\usepackage{longtable,booktabs,array}
+\usepackage{calc} % for calculating minipage widths
+% Correct order of tables after \paragraph or \subparagraph
+\usepackage{etoolbox}
+\makeatletter
+\patchcmd\longtable{\par}{\if@noskipsec\mbox{}\fi\par}{}{}
+\makeatother
+% Allow footnotes in longtable head/foot
+\IfFileExists{footnotehyper.sty}{\usepackage{footnotehyper}}{\usepackage{footnote}}
+\makesavenoteenv{longtable}
+
+% multiplecol
+\usepackage{multicol}
+
+% strikeout
+\usepackage[normalem]{ulem}
+
+% morefloats
+\usepackage{morefloats}
+
+
+% tightlist macro required by pandoc >= 1.14
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+
+% title / author / date
+\title{20 minutes of entanglement}
+\author{markwallace.org/teaching/entanglement}
+\date{}
+
+%\geometry{showframe}% for debugging purposes -- displays the margins
+
+%Switch fonts
+%\usepackage[sfdefault,condensed]{roboto}
+%\usepackage[sfdefault,light,condensed]{roboto}
+%\usepackage{libertineRoman}
+%\usepackage{libertineRoman}
+%\usepackage{mweights}
+\usepackage[sfdefault,light]{merriweather}
+
+%Fix paragraph indent
+\usepackage[parfill]{parskip}
+
+%Fix Page colour
+\pagecolor{white}
+
+%Fix Section Heading fonts sizes and spacing.
+\usepackage{titlesec}
+%\newfontfamily\headingfont[]{Gill Sans} % Specify different font for section headings
+\titleformat{\section}{\sffamily\LARGE\bfseries}{\thesection}{1em}{}[]
+\titleformat{\subsection}{\sffamily\Large\bfseries}{\thesubsection}{1em}{}[]
+\titlespacing{\section}{0pt}{\parskip}{0pt}
+\titlespacing{\subsection}{0pt}{\parskip}{0pt}
+\titlespacing{\subsubsection}{0pt}{\parskip}{0pt}
+
+%Fix Title fonts sizes and spacing.
+\usepackage{titling}
+\setlength{\droptitle}{-80pt}
+\pretitle{ \begin{fullwidth}\begin{flushleft}\Huge\sffamily\bfseries}
+\posttitle{\par\end{flushleft}\vskip 0.5em \end{fullwidth}}
+\preauthor{\begin{flushleft}\LARGE\sffamily}
+\postauthor{\par\end{flushleft}\vskip 0.5em}
+\predate{\begin{flushleft}\Large\sffamily}
+\postdate{\par\end{flushleft}\vskip 0.5em}
+
+%Attempt to fix ugly font for equation numberign
+\makeatletter
+\def\tagform@#1{\maketag@@@{\sffamily[\ignorespaces#1\unskip\@@italiccorr]}}
+\renewcommand{\eqref}[1]{\textup{{\normalfont(\ref{#1}}\normalfont)}}
+\makeatother
+
+\begin{document}
+
+\maketitle
+
+
+\setlength{\parindent}{0pt}
+
+
+
+\hypertarget{what-is-entanglement}{%
+\section{What is entanglement?}\label{what-is-entanglement}}
+
+Entanglement quantifies the quantum mechanical observation that one can know everything about a system but nothing about its individual parts. It describes a situation where particles become connected in a way that the state of one particle instantly affects the state of another, no matter the distance between them.
+
+\begin{marginfigure}
+
+{\centering \includegraphics{img/Niels_Bohr_Albert_Einstein4} 
+
+}
+
+\caption['Einstein, stop telling God what to do.' - Niels Bohr]{'Einstein, stop telling God what to do.' - Niels Bohr}\label{fig:unnamed-chunk-1}
+\end{marginfigure}
+
+This fundamental feature of quantum mechanics sets it apart from what we might expect from classical intuition. The property of entanglement underpins developments in quantum computing and quantum cryptography. We can also find entanglement in biology, controlling processes as varied as photosynthesis, olfaction, and magnetoception.
+
+Einstein referred to entanglement as ``Spooky action at a distance''. He argued for ``hidden variables'' that would eliminate the need for fundamental randomness in quantum mechanics, but experiments have since ruled out such hidden-variable theories.
+
+\hypertarget{spin}{%
+\section{Spin}\label{spin}}
+
+Electron spin is an intrinsic angular momentum associated with the electron.
+
+All possible spin states can be represented in a two-dimensional vector space. We can choose \(|u\rangle\) and \(|d\rangle\) as our two basis vectors and write all state as a linear superposition of these two states.
+\[
+|\psi\rangle = \alpha |u\rangle + \beta |d\rangle 
+\]
+
+Recall, we can describe three operators \(\sigma_x\),\(\sigma_y\), \(\sigma_z\) that describe spin components in a specific direction.
+
+\[
+\sigma_x = \begin{bmatrix} 0 & 1 \\ 1 & 0 \end{bmatrix}, \quad \sigma_y = \begin{bmatrix} 0 & -i \\ i & 0 \end{bmatrix}, \quad \sigma_z = \begin{bmatrix} 1 & 0 \\ 0 & -1 \end{bmatrix}
+\]
+
+\textbf{Exercise:} \emph{Can you write out how \(\sigma_x\), operates on \(|u\rangle\) and \(|d\rangle\)? Can you do the same for \(\sigma_y\) and \(\sigma_z\)?}
+
+\newpage
+
+\hypertarget{interacting-spins}{%
+\section{Interacting spins}\label{interacting-spins}}
+
+\begin{marginfigure}
+
+{\centering \includegraphics{img/spinsinBfield} 
+
+}
+
+\caption[Spin alignment in an external field]{Spin alignment in an external field}\label{fig:unnamed-chunk-2}
+\end{marginfigure}
+
+\hypertarget{product-states}{%
+\subsection{Product states}\label{product-states}}
+
+Now let us consider a system with not one, but two electrons. A state of this combined system is said to be entangled if it \textbf{cannot} be written in the form of a \emph{product state}.
+
+So considering two electrons, \(1\) and \(2\), we can write the overall product state as:
+
+\[
+\begin{aligned}
+|\Psi\rangle &=  |\psi_1\rangle \otimes |\psi_1\rangle \\
+&= \alpha_1\alpha_2|uu\rangle + \alpha_1\beta_2 |ud\rangle  + \beta_1\alpha_2 |du\rangle + \beta_1\beta_2 |dd\rangle
+\end{aligned} 
+\]
+
+The four complex numbers \(\alpha_1\), \(\beta_1\),\(\alpha_2\), \(\beta_2\) describe 8 parameters in total. Normalisation of the wavefunction for each individual electron removes two of these degrees of freedom. Phase invariance allows us to arbitrarily make two of these variables real (as any overall phase factor between different spin states cancels out when calculating probabilities the relative phase does not impact the measurable outcomes). That leaves 4 degrees of freedom.
+
+\hypertarget{entangled-states}{%
+\subsection{Entangled states}\label{entangled-states}}
+
+Now let us consider the most general form of a linear superposisiton of these four states, \(|uu\rangle\), \(|ud\rangle\), \(|du\rangle\), and \(|dd\rangle\):
+
+\[
+| \psi \rangle = \phi_{uu}|uu\rangle+ \phi_{ud}|ud\rangle+ \phi_{du}|du\rangle+ \phi_{dd}|dd\rangle
+\]
+
+Again we have 4 complex numbers (\(\phi_{uu}\), \(\phi_{ud}\), \(\phi_{du}\), \(\phi_{dd}\)), but now only one overall noramization condition, and one case of phase invaiance. That leaves 6 degrees of freedom. So this \textbf{entangled} system has more states than product states.
+
+\hypertarget{singlet-states}{%
+\subsection{Singlet states}\label{singlet-states}}
+
+A singlet state is an example of a \emph{maximally entangled state}. This state cannot be expressed as the product of two one-particle states.
+
+\[
+| \psi_s \rangle = \frac{1}{\sqrt{2}} \Big\{ |ud\rangle - |du\rangle \Big\}
+\]
+
+\textbf{Exercise:} \emph{Can you prove that \(| \psi_s \rangle\) cannot be written as a product state?}
+
+\newpage
+
+So what spins might we expect from such a state? Let's calculate the expectation values for \(\sigma_z\) of electron \(1\).
+
+\[
+\begin{aligned}
+\langle \sigma_z   \rangle  &=  \langle \psi_s | \sigma_z |\psi_s  \rangle \\
+&=  \frac{1}{\sqrt{2}}  \Big\{ \langle ud |  - \langle du | \Big\} \sigma_z \frac{1}{\sqrt{2}} \Big\{ |ud  \rangle -|du  \rangle \Big\}  \\
+&=\frac{1}{2} \Big\{ \langle ud | - \langle du | \Big\}\Big\{|ud  \rangle +|du  \rangle \Big\} \\
+&=0
+\end{aligned}
+\]
+
+If the expectation value of a component of \(\sigma\) is zero, it means that the experimental outcome is equally as likely to be \(+1\) or \(-1\), thus the outcome is completely uncertain. Even though we know the exact state-vector, \(|\Psi_s\rangle\), we know nothing at all about the outcome of any measurement of any component of either spin.
+
+\textbf{Exercise:} \emph{What about \(\sigma_x\) and \(\sigma_y\)?}
+
+\hypertarget{spin-products}{%
+\subsection{Spin products}\label{spin-products}}
+
+Let's suppose we measure the spin state \(\sigma_z\) of both electrons. We need two operators that act on each electron, but they need different names. Let's call \(\sigma_z\) the operator that acts on the first electron and \(\tau_z\) for second electron. Our observable is to measure both spins for electron pairs, and then they multiply the results, we measure the product \(\tau_z\sigma_z\).
+
+Let's apply this combined operator to our singlet state.
+
+\[
+\begin{aligned}
+\tau_z\sigma_z |\Psi_s\rangle &= \tau_z\sigma_z \frac{1}{\sqrt{2}} \Big\{ -|ud\rangle + |du\rangle \Big\} \\
+&= - |\Psi_s\rangle
+\end{aligned}
+\]
+
+So this tells us that for this singlet state electrons 1 and 2 always have opposite spins, even if the individual spins are random.
+
+\textbf{Exercise:} \emph{Suppose that instead of measuring the z components of their spins, We measure the x components. To find out how their outcomes are correlated, calculate the observable \(\tau_x\sigma_x\)}.
+
+\begin{marginfigure}
+
+{\centering \includegraphics{img/vector_spinstates} 
+
+}
+
+\caption[A vector model of spin alignment in an external field can be used to visualize the difference between singlet and triplet states]{A vector model of spin alignment in an external field can be used to visualize the difference between singlet and triplet states.}\label{fig:unnamed-chunk-3}
+\end{marginfigure}
+
+This is interesting: \(|\Psi_s\rangle\) is also an eigenvector of \(\tau_x\sigma_x\) with eigenvalue -1. So regardless of the component, for \(|\Psi_s\rangle\) the spins are always opposite. They are always \textbf{entangled}.
+
+\hypertarget{other-maximally-entangled-states}{%
+\subsection{Other maximally entangled states}\label{other-maximally-entangled-states}}
+
+Given the general form of \(|\Psi\rangle\), it is perhaps unsuprising that the singlet state \(|\Psi_s\rangle\) is not the only maximally entangled state. There are three other \emph{triplet} states to consider:
+
+\[
+\begin{aligned}
+|\psi_{T,+}\rangle &= \frac{1}{\sqrt{2}} \Big\{ |uu\rangle + |dd\rangle \Big\} \\
+|\psi_{T,0}\rangle &= \frac{1}{\sqrt{2}} \Big\{ |ud\rangle + |du\rangle \Big\} \\
+|\psi_{T,-}\rangle &= - \frac{1}{\sqrt{2}} \Big\{ |uu\rangle - |dd\rangle \Big\}
+\end{aligned}
+\]
+
+\hypertarget{classical-correlations}{%
+\section{Classical correlations}\label{classical-correlations}}
+
+A classical analogue of two entangled spins might be to have two coins; flip one and set the other to the opposite configuration. The result of our observations here we can also call \(\sigma\) and \(\tau\), assigning heads as up and tails as down.
+
+\begin{marginfigure}
+
+{\centering \includegraphics{img/coins} 
+
+}
+
+\caption[We can prepare two coins to provide a classically correlated two state system]{We can prepare two coins to provide a classically correlated two state system. }\label{fig:unnamed-chunk-4}
+\end{marginfigure}
+
+We can again calculate expectation values for \(\langle\sigma_z\rangle\), \(\langle\tau_z\rangle\) and \(\langle\tau_z\sigma_z\rangle\). Notice that the average of the products does not equal to the product of the averages.
+
+\[
+\langle\sigma_1\sigma_2\rangle-\langle\sigma_1\rangle \langle\sigma_2\rangle \neq 0
+\]
+
+This is the \emph{covariance} and is one way to quantify how two measurables are interrelated.
+
+\hypertarget{summary}{%
+\section{Summary}\label{summary}}
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{Non-locality}: Entangled particles exhibit instantaneous correlations regardless of distance, challenging classical notions of locality.
+\item
+  \textbf{Measurement}: The act of measuring one entangled particle instantaneously determines the state of its counterpart, challenging classical causality.
+\item
+  \textbf{Superposition}: Entangled particles encompass multiple states simultaneously, they are not like classical particles.
+\item
+  Quantum mechanics implies \textbf{intrinsic randomness}.
+\end{itemize}
+
+\hypertarget{resources}{%
+\section{Resources}\label{resources}}
+
+L. Susskind and A. Friedman, \textbf{\href{https://www.penguin.co.uk/books/253263/quantum-mechanics-the-theoretical-minimum-by-friedman-leonard-susskind-and-art/9780141977812}{Quantum Mechanics: The theoretical minimum.}} (Penguin, 2015, \url{ISBN:978-0465062904})
+B. Simons \textbf{Part II: Advanced Quantum Mechanics Lecture Notes} \url{www.tcm.phy.cam.ac.uk/~bds10/aqp.html}
+D. Tong. \textbf{Part II: Applications of Quantum Mechanics Lecture Notes} \url{http://www.damtp.cam.ac.uk/user/tong/aqm/aqm.pdf}
+D.J. Griffiths. \textbf{Introduction to Quantum Mechanics.} Chapter 12. (CUP 2018, \url{ISBN:978-1107189638})
+K. Konishi and G. Paffuti, \textbf{Quantum Mechanics: A New Introduction.} (OUP, 2009 \url{ISBN:978-0199560264})
+
+
+
+\end{document}

@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>2 Spin | 20 minutes of entanglement</title>
+  <meta name="description" content="Entanglement Notes." />
+  <meta name="generator" content="bookdown 0.35 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="2 Spin | 20 minutes of entanglement" />
+  <meta property="og:type" content="book" />
+  <meta property="og:image" content="http://markwallace.org/teaching/entanglement/images/cover.png" />
+  <meta property="og:description" content="Entanglement Notes." />
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="2 Spin | 20 minutes of entanglement" />
+  
+  <meta name="twitter:description" content="Entanglement Notes." />
+  <meta name="twitter:image" content="http://markwallace.org/teaching/entanglement/images/cover.png" />
+
+<meta name="author" content="markwallace.org/teaching/entanglement" />
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="what-is-entanglement.html"/>
+<link rel="next" href="interacting-spins.html"/>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+
+
+
+<style type="text/css">
+  
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li class="chapter" data-level="1" data-path="what-is-entanglement.html"><a href="what-is-entanglement.html"><i class="fa fa-check"></i><b>1</b> What is entanglement?</a></li>
+<li class="chapter" data-level="2" data-path="spin.html"><a href="spin.html"><i class="fa fa-check"></i><b>2</b> Spin</a></li>
+<li class="chapter" data-level="3" data-path="interacting-spins.html"><a href="interacting-spins.html"><i class="fa fa-check"></i><b>3</b> Interacting spins</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="interacting-spins.html"><a href="interacting-spins.html#product-states"><i class="fa fa-check"></i><b>3.1</b> Product states</a></li>
+<li class="chapter" data-level="3.2" data-path="interacting-spins.html"><a href="interacting-spins.html#entangled-states"><i class="fa fa-check"></i><b>3.2</b> Entangled states</a></li>
+<li class="chapter" data-level="3.3" data-path="interacting-spins.html"><a href="interacting-spins.html#singlet-states"><i class="fa fa-check"></i><b>3.3</b> Singlet states</a></li>
+<li class="chapter" data-level="3.4" data-path="interacting-spins.html"><a href="interacting-spins.html#spin-products"><i class="fa fa-check"></i><b>3.4</b> Spin products</a></li>
+<li class="chapter" data-level="3.5" data-path="interacting-spins.html"><a href="interacting-spins.html#other-maximally-entangled-states"><i class="fa fa-check"></i><b>3.5</b> Other maximally entangled states</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="classical-correlations.html"><a href="classical-correlations.html"><i class="fa fa-check"></i><b>4</b> Classical correlations</a></li>
+<li class="chapter" data-level="5" data-path="summary.html"><a href="summary.html"><i class="fa fa-check"></i><b>5</b> Summary</a></li>
+<li class="chapter" data-level="6" data-path="resources.html"><a href="resources.html"><i class="fa fa-check"></i><b>6</b> Resources</a></li>
+<li class="divider"></li>
+<li><a href="mailto:mark.walllace@kcl.ac.uk">&copy; markwallace.org/teaching/entanglement</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">20 minutes of entanglement</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<link href="https://fonts.googleapis.com/css?family=Merriweather+Sans:300,400,700,800" rel="stylesheet">
+
+ <!-- <script type="text/javascript">
+     window.onload = require(["gitbook", "jQuery"], function(gitbook, $) {
+    gitbook.events.bind('start', function (e, config) {
+        if ($(document).width() <= 1200) {
+            gitbook.sidebar.toggle(false, false);
+        }
+    });
+});
+</script> -->
+<div id="spin" class="section level1 hasAnchor" number="2">
+<h1><span class="header-section-number">2</span> Spin<a href="spin.html#spin" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p>Electron spin is an intrinsic angular momentum associated with the electron.</p>
+<p>All possible spin states can be represented in a two-dimensional vector space. We can choose <span class="math inline">\(|u\rangle\)</span> and <span class="math inline">\(|d\rangle\)</span> as our two basis vectors and write all state as a linear superposition of these two states.
+<span class="math display">\[
+|\psi\rangle = \alpha |u\rangle + \beta |d\rangle
+\]</span></p>
+<p>Recall, we can describe three operators <span class="math inline">\(\sigma_x\)</span>,<span class="math inline">\(\sigma_y\)</span>, <span class="math inline">\(\sigma_z\)</span> that describe spin components in a specific direction.</p>
+<p><span class="math display">\[
+\sigma_x = \begin{bmatrix} 0 &amp; 1 \\ 1 &amp; 0 \end{bmatrix}, \quad \sigma_y = \begin{bmatrix} 0 &amp; -i \\ i &amp; 0 \end{bmatrix}, \quad \sigma_z = \begin{bmatrix} 1 &amp; 0 \\ 0 &amp; -1 \end{bmatrix}
+\]</span></p>
+<!-- ^[The Pauli spin matrices, $\sigma_x$,$\sigma_y$, $\sigma_z$ \begin{align*}
+\sigma_x &= \begin{bmatrix} 0 & 1 \\ 1 & 0 \end{bmatrix} \\
+\sigma_y &= \begin{bmatrix} 0 & -i \\ i & 0 \end{bmatrix} \\
+\sigma_z &= \begin{bmatrix} 1 & 0 \\ 0 & -1 \end{bmatrix}
+\end{align*}] -->
+<p><strong>Exercise:</strong> <em>Can you write out how <span class="math inline">\(\sigma_x\)</span>, operates on <span class="math inline">\(|u\rangle\)</span> and <span class="math inline">\(|d\rangle\)</span>? Can you do the same for <span class="math inline">\(\sigma_y\)</span> and <span class="math inline">\(\sigma_z\)</span>?</em></p>
+<div style="page-break-after: always;"></div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="what-is-entanglement.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="interacting-spins.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": false,
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": ["Entanglement.pdf"],
+"search": {
+"engine": "fuse",
+"options": null
+},
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>

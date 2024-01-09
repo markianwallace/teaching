@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>3 Interacting spins | 20 minutes of entanglement</title>
+  <meta name="description" content="Entanglement Notes." />
+  <meta name="generator" content="bookdown 0.35 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="3 Interacting spins | 20 minutes of entanglement" />
+  <meta property="og:type" content="book" />
+  <meta property="og:image" content="http://markwallace.org/teaching/entanglement/images/cover.png" />
+  <meta property="og:description" content="Entanglement Notes." />
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="3 Interacting spins | 20 minutes of entanglement" />
+  
+  <meta name="twitter:description" content="Entanglement Notes." />
+  <meta name="twitter:image" content="http://markwallace.org/teaching/entanglement/images/cover.png" />
+
+<meta name="author" content="markwallace.org/teaching/entanglement" />
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="spin.html"/>
+<link rel="next" href="classical-correlations.html"/>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+
+
+
+<style type="text/css">
+  
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li class="chapter" data-level="1" data-path="what-is-entanglement.html"><a href="what-is-entanglement.html"><i class="fa fa-check"></i><b>1</b> What is entanglement?</a></li>
+<li class="chapter" data-level="2" data-path="spin.html"><a href="spin.html"><i class="fa fa-check"></i><b>2</b> Spin</a></li>
+<li class="chapter" data-level="3" data-path="interacting-spins.html"><a href="interacting-spins.html"><i class="fa fa-check"></i><b>3</b> Interacting spins</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="interacting-spins.html"><a href="interacting-spins.html#product-states"><i class="fa fa-check"></i><b>3.1</b> Product states</a></li>
+<li class="chapter" data-level="3.2" data-path="interacting-spins.html"><a href="interacting-spins.html#entangled-states"><i class="fa fa-check"></i><b>3.2</b> Entangled states</a></li>
+<li class="chapter" data-level="3.3" data-path="interacting-spins.html"><a href="interacting-spins.html#singlet-states"><i class="fa fa-check"></i><b>3.3</b> Singlet states</a></li>
+<li class="chapter" data-level="3.4" data-path="interacting-spins.html"><a href="interacting-spins.html#spin-products"><i class="fa fa-check"></i><b>3.4</b> Spin products</a></li>
+<li class="chapter" data-level="3.5" data-path="interacting-spins.html"><a href="interacting-spins.html#other-maximally-entangled-states"><i class="fa fa-check"></i><b>3.5</b> Other maximally entangled states</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="classical-correlations.html"><a href="classical-correlations.html"><i class="fa fa-check"></i><b>4</b> Classical correlations</a></li>
+<li class="chapter" data-level="5" data-path="summary.html"><a href="summary.html"><i class="fa fa-check"></i><b>5</b> Summary</a></li>
+<li class="chapter" data-level="6" data-path="resources.html"><a href="resources.html"><i class="fa fa-check"></i><b>6</b> Resources</a></li>
+<li class="divider"></li>
+<li><a href="mailto:mark.walllace@kcl.ac.uk">&copy; markwallace.org/teaching/entanglement</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">20 minutes of entanglement</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<link href="https://fonts.googleapis.com/css?family=Merriweather+Sans:300,400,700,800" rel="stylesheet">
+
+ <!-- <script type="text/javascript">
+     window.onload = require(["gitbook", "jQuery"], function(gitbook, $) {
+    gitbook.events.bind('start', function (e, config) {
+        if ($(document).width() <= 1200) {
+            gitbook.sidebar.toggle(false, false);
+        }
+    });
+});
+</script> -->
+<div id="interacting-spins" class="section level1 hasAnchor" number="3">
+<h1><span class="header-section-number">3</span> Interacting spins<a href="interacting-spins.html#interacting-spins" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-2"></span>
+<img src="img/spinsinBfield.jpg" alt="Spin alignment in an external field"  />
+<p class="caption">
+Figure 3.1: Spin alignment in an external field
+</p>
+</div>
+<div id="product-states" class="section level2 hasAnchor" number="3.1">
+<h2><span class="header-section-number">3.1</span> Product states<a href="interacting-spins.html#product-states" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Now let us consider a system with not one, but two electrons. A state of this combined system is said to be entangled if it <strong>cannot</strong> be written in the form of a <em>product state</em>.</p>
+<p>So considering two electrons, <span class="math inline">\(1\)</span> and <span class="math inline">\(2\)</span>, we can write the overall product state as:</p>
+<p><span class="math display">\[
+\begin{aligned}
+|\Psi\rangle &amp;=  |\psi_1\rangle \otimes |\psi_1\rangle \\
+&amp;= \alpha_1\alpha_2|uu\rangle + \alpha_1\beta_2 |ud\rangle  + \beta_1\alpha_2 |du\rangle + \beta_1\beta_2 |dd\rangle
+\end{aligned}
+\]</span></p>
+<p>The four complex numbers <span class="math inline">\(\alpha_1\)</span>, <span class="math inline">\(\beta_1\)</span>,<span class="math inline">\(\alpha_2\)</span>, <span class="math inline">\(\beta_2\)</span> describe 8 parameters in total. Normalisation of the wavefunction for each individual electron removes two of these degrees of freedom. Phase invariance allows us to arbitrarily make two of these variables real (as any overall phase factor between different spin states cancels out when calculating probabilities the relative phase does not impact the measurable outcomes). That leaves 4 degrees of freedom.</p>
+</div>
+<div id="entangled-states" class="section level2 hasAnchor" number="3.2">
+<h2><span class="header-section-number">3.2</span> Entangled states<a href="interacting-spins.html#entangled-states" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Now let us consider the most general form of a linear superposisiton of these four states, <span class="math inline">\(|uu\rangle\)</span>, <span class="math inline">\(|ud\rangle\)</span>, <span class="math inline">\(|du\rangle\)</span>, and <span class="math inline">\(|dd\rangle\)</span>:</p>
+<p><span class="math display">\[
+| \psi \rangle = \phi_{uu}|uu\rangle+ \phi_{ud}|ud\rangle+ \phi_{du}|du\rangle+ \phi_{dd}|dd\rangle
+\]</span></p>
+<p>Again we have 4 complex numbers (<span class="math inline">\(\phi_{uu}\)</span>, <span class="math inline">\(\phi_{ud}\)</span>, <span class="math inline">\(\phi_{du}\)</span>, <span class="math inline">\(\phi_{dd}\)</span>), but now only one overall noramization condition, and one case of phase invaiance. That leaves 6 degrees of freedom. So this <strong>entangled</strong> system has more states than product states.</p>
+</div>
+<div id="singlet-states" class="section level2 hasAnchor" number="3.3">
+<h2><span class="header-section-number">3.3</span> Singlet states<a href="interacting-spins.html#singlet-states" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>A singlet state is an example of a <em>maximally entangled state</em>. This state cannot be expressed as the product of two one-particle states.</p>
+<p><span class="math display">\[
+| \psi_s \rangle = \frac{1}{\sqrt{2}} \Big\{ |ud\rangle - |du\rangle \Big\}
+\]</span></p>
+<p><strong>Exercise:</strong> <em>Can you prove that <span class="math inline">\(| \psi_s \rangle\)</span> cannot be written as a product state?</em></p>
+<div style="page-break-after: always;"></div>
+<p>So what spins might we expect from such a state? Let’s calculate the expectation values for <span class="math inline">\(\sigma_z\)</span> of electron <span class="math inline">\(1\)</span>.</p>
+<p><span class="math display">\[
+\begin{aligned}
+\langle \sigma_z   \rangle  &amp;=  \langle \psi_s | \sigma_z |\psi_s  \rangle \\
+&amp;=  \frac{1}{\sqrt{2}}  \Big\{ \langle ud |  - \langle du | \Big\} \sigma_z \frac{1}{\sqrt{2}} \Big\{ |ud  \rangle -|du  \rangle \Big\}  \\
+&amp;=\frac{1}{2} \Big\{ \langle ud | - \langle du | \Big\}\Big\{|ud  \rangle +|du  \rangle \Big\} \\
+&amp;=0
+\end{aligned}
+\]</span></p>
+<p>If the expectation value of a component of <span class="math inline">\(\sigma\)</span> is zero, it means that the experimental outcome is equally as likely to be <span class="math inline">\(+1\)</span> or <span class="math inline">\(-1\)</span>, thus the outcome is completely uncertain. Even though we know the exact state-vector, <span class="math inline">\(|\Psi_s\rangle\)</span>, we know nothing at all about the outcome of any measurement of any component of either spin.</p>
+<p><strong>Exercise:</strong> <em>What about <span class="math inline">\(\sigma_x\)</span> and <span class="math inline">\(\sigma_y\)</span>?</em></p>
+</div>
+<div id="spin-products" class="section level2 hasAnchor" number="3.4">
+<h2><span class="header-section-number">3.4</span> Spin products<a href="interacting-spins.html#spin-products" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Let’s suppose we measure the spin state <span class="math inline">\(\sigma_z\)</span> of both electrons. We need two operators that act on each electron, but they need different names. Let’s call <span class="math inline">\(\sigma_z\)</span> the operator that acts on the first electron and <span class="math inline">\(\tau_z\)</span> for second electron. Our observable is to measure both spins for electron pairs, and then they multiply the results, we measure the product <span class="math inline">\(\tau_z\sigma_z\)</span>.</p>
+<p>Let’s apply this combined operator to our singlet state.</p>
+<p><span class="math display">\[
+\begin{aligned}
+\tau_z\sigma_z |\Psi_s\rangle &amp;= \tau_z\sigma_z \frac{1}{\sqrt{2}} \Big\{ -|ud\rangle + |du\rangle \Big\} \\
+&amp;= - |\Psi_s\rangle
+\end{aligned}
+\]</span></p>
+<p>So this tells us that for this singlet state electrons 1 and 2 always have opposite spins, even if the individual spins are random.</p>
+<p><strong>Exercise:</strong> <em>Suppose that instead of measuring the z components of their spins, We measure the x components. To find out how their outcomes are correlated, calculate the observable <span class="math inline">\(\tau_x\sigma_x\)</span></em>.</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-3"></span>
+<img src="img/vector_spinstates.jpg" alt="A vector model of spin alignment in an external field can be used to visualize the difference between singlet and triplet states."  />
+<p class="caption">
+Figure 3.2: A vector model of spin alignment in an external field can be used to visualize the difference between singlet and triplet states.
+</p>
+</div>
+<p>This is interesting: <span class="math inline">\(|\Psi_s\rangle\)</span> is also an eigenvector of <span class="math inline">\(\tau_x\sigma_x\)</span> with eigenvalue -1. So regardless of the component, for <span class="math inline">\(|\Psi_s\rangle\)</span> the spins are always opposite. They are always <strong>entangled</strong>.</p>
+</div>
+<div id="other-maximally-entangled-states" class="section level2 hasAnchor" number="3.5">
+<h2><span class="header-section-number">3.5</span> Other maximally entangled states<a href="interacting-spins.html#other-maximally-entangled-states" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Given the general form of <span class="math inline">\(|\Psi\rangle\)</span>, it is perhaps unsuprising that the singlet state <span class="math inline">\(|\Psi_s\rangle\)</span> is not the only maximally entangled state. There are three other <em>triplet</em> states to consider:</p>
+<p><span class="math display">\[
+\begin{aligned}
+|\psi_{T,+}\rangle &amp;= \frac{1}{\sqrt{2}} \Big\{ |uu\rangle + |dd\rangle \Big\} \\
+|\psi_{T,0}\rangle &amp;= \frac{1}{\sqrt{2}} \Big\{ |ud\rangle + |du\rangle \Big\} \\
+|\psi_{T,-}\rangle &amp;= - \frac{1}{\sqrt{2}} \Big\{ |uu\rangle - |dd\rangle \Big\}
+\end{aligned}
+\]</span></p>
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="spin.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="classical-correlations.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": false,
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": ["Entanglement.pdf"],
+"search": {
+"engine": "fuse",
+"options": null
+},
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>
